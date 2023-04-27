@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -10,7 +10,7 @@ import string
 app = Flask(__name__)
 
 # Load the dataset into a pandas DataFrame
-df = pd.read_csv('product-review.csv')
+df = pd.read_csv('product_review.csv')
 
 # Preprocess the text data
 nltk.download('stopwords')
